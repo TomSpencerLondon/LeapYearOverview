@@ -6,7 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-public class LeapYearShould {
+public class YearShould {
   @ParameterizedTest
   @CsvSource({
       "1997, false",
@@ -17,7 +17,7 @@ public class LeapYearShould {
       "2000, true",
       "2004, true"
   })
-  void return_false_for_year_not_divisible_by_4(int input, boolean output) {
+  void return_correct_check_for_leap_year(int input, boolean output) {
     assertEquals(output, newYear(input).check());
   }
 
